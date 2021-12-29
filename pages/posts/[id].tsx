@@ -6,7 +6,7 @@ import {
 } from 'next';
 
 // Custom Components
-import { Article } from '@components/Article';
+import { Article, BlogPostImage } from '@components/Article';
 
 // Custom Types
 import type { Post } from '../index';
@@ -17,6 +17,7 @@ export default function BlogPost({
     return (
         <Article>
             <h1>{post.title}</h1>
+            <BlogPostImage src="/cat.jpeg" alt="My little cat" />
             <p>{post.body}</p>
         </Article>
     );
