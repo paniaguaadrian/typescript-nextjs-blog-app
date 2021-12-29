@@ -1,4 +1,5 @@
 // Next Components
+import Link from 'next/link';
 import { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 
@@ -54,7 +55,7 @@ const PostBody = styled.p`
     font-size: 16px;
 `;
 
-const title: string = 'Next.js + TypeScript!!';
+const title: string = 'My awesome blog!';
 
 export default function Home({
     posts,
@@ -68,12 +69,15 @@ export default function Home({
 
             <Main>
                 <BlogTitle>{title}</BlogTitle>
+                <Link href="/about">About this blog</Link>
                 <List>
                     {posts.map((post) => (
-                        <ListItem key={post.id}>
-                            <PostTitle>{post.title}</PostTitle>
-                            <PostBody>{post.body}</PostBody>
-                        </ListItem>
+                        <Link href="/posts/[id]" as={`/posts/${post.id}`}>
+                            <ListItem key={post.id}>
+                                <PostTitle>{post.title}</PostTitle>
+                                <PostBody>{post.body}</PostBody>
+                            </ListItem>
+                        </Link>
                     ))}
                 </List>
             </Main>
