@@ -54,7 +54,7 @@ const PostBody = styled.p`
     font-size: 16px;
 `;
 
-const title: string = 'Next.js + TypeScript';
+const title: string = 'Next.js + TypeScript!!';
 
 export default function Home({
     posts,
