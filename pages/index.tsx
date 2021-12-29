@@ -13,6 +13,7 @@ import {
     PostTitle,
     PostBody,
 } from '@components/Article';
+import { FeedbackForm } from '@components/FeedbackForm';
 
 const title: string = 'My awesome blog!';
 
@@ -43,6 +44,7 @@ export default function Home({
                         </Link>
                     ))}
                 </List>
+                <FeedbackForm />
             </Main>
         </Container>
     );
